@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "rubric_based_final_response_quality_v1": {
+      "threshold": 0.8,
+      "judge_model_options": {
+        "judge_model": "gemini-3.5-flash",
+        "num_samples": 3
+      },
+      "rubrics": [
+        {
+          "rubric_id": "has_contact_details",
+          "rubric_content": {
+            "text_property": "The response contains any user's name, email, phone number, or address"
+          }
+        },
+        {
+          "rubric_id": "only_has_name",
+          "rubric_content": {
+            "text_property": "The response only contains user's name."
+          }
+        }
+      ]
+    }
+  }
+}

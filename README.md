@@ -74,3 +74,38 @@ root_agent = Agent(
 
 ### STEP 6. Install Eval module
 ```pip install "google-adk[eval]"```
+
+### STEP 7. Add test cofig for the evaluations
+
+Create `test_config.json` in `my_agent` folder:
+
+```
+{
+  "criteria": {
+    "rubric_based_final_response_quality_v1": {
+      "threshold": 0.8,
+      "judge_model_options": {
+        "judge_model": "gemini-3.5-flash",
+        "num_samples": 3
+      },
+      "rubrics": [
+        {
+          "rubric_id": "has_contact_details",
+          "rubric_content": {
+            "text_property": "The response contains any user's email, phone number, or address"
+          }
+        },
+        {
+          "rubric_id": "has_name",
+          "rubric_content": {
+            "text_property": "The response contains user's name."
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+Run the evaluation with this config:
+```adk eval my_agent my_agent/<YOUR_EVAL_SET>.evalset.json --config_file_path=my_agent/test_config.json```

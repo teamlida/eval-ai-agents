@@ -1,0 +1,116 @@
+{
+  "eval_set_id": "eval_set_1",
+  "name": "eval_set_1",
+  "eval_cases": [
+    {
+      "eval_id": "tell_me_about_user_1",
+      "conversation": [
+        {
+          "invocation_id": "e-64078884-0007-4026-83d8-1227df443c4e",
+          "user_content": {
+            "parts": [
+              {
+                "text": "tell me about user 1"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Here is the information for **User 1**:\n\n* **Name:** Vicenta Huel\n* **Username:** Lois_Nader8\n* **Email:** Myrtle.Kirlin@hotmail.com\n* **Phone:** (231) 236-7616 x1676\n* **Company:** Heidenreich Group\n* **Address:** 5581 Harrison Avenue, North Dakota, 95327-9050, Indonesia\n* **Profile Photo:** [View Profile Picture](https://json-server.dev/ai-profiles/50.png)",
+                "thought_signature": "EtcDCtQDAWkUfROP_vY1F6KCgYRmySJ-BzB2NUMZ-bwKkntBZcKLK2Gl8JuMXlUrQCTq2JpJq5YtBzoPZjKNo7Vwppf_-O_2c-mbb341-yXT7TiBIXypyLUa6g87c1NLC-v75NA0G25G_nkdA8i5hXFYPQD7UpRyzRPkuSWuk27y2RxBIl8-rBSuqC2set0B4eny6C2vukDwn3dUam5MaISNivESoOwvp0SpK2cnHL46q1EHi9TpMAvJsGPZB2eO1hopncyJp4S_aHzSkCjcp8vCvVOqkPxt8-eOKLAsJGvSyyL-VNNZHHMke7IQJ6wtpXr6Nqtv6ENaENWaCEDmm4VGEhZ5iNWu2eER2HNLyt_6wGVKkrQMh7aVEgXp98MQFCEju7tCuJT5wNLEMedN6ZTg6S5HPF1xFt_N7krrUTyjc0Ci1Zc1GWACDh_rQPe3CrocbyKEnYarOHz8u6ENddixHULs6-Q4YEEn2WSo7ic5zqROoj8XUTDy0rfYpdPlRV-MJJCHiaQ2VXkRY1IerVIHXFm03yx2EgpUuY4j8sXsmpyHNZmpFdetyW9K6EJFbixcJlNs6Xo7FRzwGJAb3n1ATR6Mkba7q_BNpXLN9ot68nylcgJMiU1J"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "call_202469",
+                        "args": {
+                          "user_id": "1"
+                        },
+                        "name": "get_user_data"
+                      },
+                      "thought_signature": "ErQCCrECAWkUfROwQ1Vxo-uG2Aemkc6ByrL9Qr1DeHREo5Y8zXu0EphGQc0jvSUByMhMG7xnF1Ya1tXyWzlc0x4Fhr4Lxq5OBK1hVaIuAK6ZQjXOxaYMQPFp_kaaS8gLRG3dihZjH8Q10TIitbN2fwjYMWHzMHfjyGT99G3NpwU3Dz3PLGJlV-DWLKOTjQ_7l0x3gRuhPf0QwDSidgUefkYAu9NjX3hZ9mmJ7ljNOGPtmpVEEbaKCNsDpwXlQVA9s8gA2fM2EKdx0NmmAPyrenr5jRAAn8b8zTfDMpyAoMm2g2WYsiH6mdQfuNuAmbmDSzL3zFx1Kh45wsfWV7l4vg6H6h1hTd4OpqqvvkTLwteCV4GiO4s_dZFu-JAP3MxrjOkX_NV8a1sopEKY_4xBJEAjn56wNiY="
+                    }
+                  ],
+                  "role": "model"
+                },
+                "usage_metadata": {
+                  "candidates_token_count": 20,
+                  "prompt_token_count": 125,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 125
+                    }
+                  ],
+                  "thoughts_token_count": 69,
+                  "total_token_count": 214
+                },
+                "model_version": "gemini-3.6-flash"
+              },
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "call_202469",
+                        "name": "get_user_data",
+                        "response": {
+                          "id": 1,
+                          "name": "Vicenta Huel",
+                          "company": "Heidenreich Group",
+                          "username": "Lois_Nader8",
+                          "email": "Myrtle.Kirlin@hotmail.com",
+                          "address": "5581 Harrison Avenue",
+                          "zip": "95327-9050",
+                          "state": "North Dakota",
+                          "country": "Indonesia",
+                          "phone": "(231) 236-7616 x1676",
+                          "photo": "https://json-server.dev/ai-profiles/50.png"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "root_agent",
+                "usage_metadata": {
+                  "candidates_token_count": 133,
+                  "prompt_token_count": 356,
+                  "prompt_tokens_details": [
+                    {
+                      "modality": "TEXT",
+                      "token_count": 356
+                    }
+                  ],
+                  "thoughts_token_count": 131,
+                  "total_token_count": 620
+                },
+                "model_version": "gemini-3.6-flash"
+              }
+            ]
+          },
+          "creation_timestamp": 1791632829.358885
+        }
+      ],
+      "session_input": {
+        "app_name": "my_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1791632837.508693
+    }
+  ],
+  "creation_timestamp": 1791632810.961954
+}
