@@ -1,0 +1,168 @@
+{
+  "eval_set_id": "star_wars",
+  "name": "star_wars",
+  "description": "Star Wars Guide eval cases",
+  "eval_cases": [
+    {
+      "eval_id": "tatooine_climate",
+      "conversation": [
+        {
+          "invocation_id": "e-tatooine-climate",
+          "user_content": {
+            "parts": [{ "text": "What is the climate of Tatooine?" }],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [{ "text": "The climate of Tatooine is arid." }],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    { "function_call": { "name": "get_planet", "args": { "name": "Tatooine" } } }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 0.0
+        }
+      ],
+      "session_input": { "app_name": "star_wars_agent", "user_id": "user", "state": {} },
+      "creation_timestamp": 0.0
+    },
+    {
+      "eval_id": "luke_height",
+      "conversation": [
+        {
+          "invocation_id": "e-luke-height",
+          "user_content": {
+            "parts": [{ "text": "How tall is Luke Skywalker?" }],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [{ "text": "Luke Skywalker is 172 cm tall." }],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    { "function_call": { "name": "get_person", "args": { "name": "Luke Skywalker" } } }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 0.0
+        }
+      ],
+      "session_input": { "app_name": "star_wars_agent", "user_id": "user", "state": {} },
+      "creation_timestamp": 0.0
+    },
+    {
+      "eval_id": "episode_8_director",
+      "conversation": [
+        {
+          "invocation_id": "e-episode-8-director",
+          "user_content": {
+            "parts": [{ "text": "Who directed Episode 8?" }],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [{ "text": "I couldn't find Episode 8 in the Star Wars data, so I can't say who directed it." }],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    { "function_call": { "name": "get_film", "args": { "film_id": 8 } } }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 0.0
+        }
+      ],
+      "session_input": { "app_name": "star_wars_agent", "user_id": "user", "state": {} },
+      "creation_timestamp": 0.0
+    },
+    {
+      "eval_id": "episode_5_title",
+      "conversation": [
+        {
+          "invocation_id": "e-episode-5-title",
+          "user_content": {
+            "parts": [{ "text": "Which film is Episode 5?" }],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [{ "text": "Episode 5 is The Empire Strikes Back." }],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    { "function_call": { "name": "get_film", "args": { "film_id": 2 } } }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 0.0
+        }
+      ],
+      "session_input": { "app_name": "star_wars_agent", "user_id": "user", "state": {} },
+      "creation_timestamp": 0.0
+    },
+    {
+      "eval_id": "chewbacca_eyes",
+      "conversation": [
+        {
+          "invocation_id": "e-chewbacca-eyes",
+          "user_content": {
+            "parts": [{ "text": "What is Chewbacca's eye color?" }],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [{ "text": "Chewbacca has brown eyes and is a Wookiee from Kashyyyk." }],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "root_agent",
+                "content": {
+                  "parts": [
+                    { "function_call": { "name": "get_person", "args": { "name": "Chewbacca" } } }
+                  ],
+                  "role": "model"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 0.0
+        }
+      ],
+      "session_input": { "app_name": "star_wars_agent", "user_id": "user", "state": {} },
+      "creation_timestamp": 0.0
+    }
+  ],
+  "creation_timestamp": 0.0
+}
