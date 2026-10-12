@@ -1,11 +1,25 @@
+import logging
+
 import requests
 from google.adk.agents.llm_agent import Agent
+
+from . import swapi_stub
 
 BASE_URL = "https://swapi.dev/api"
 TIMEOUT = 8
 
+logger = logging.getLogger(__name__)
+
 
 def _get(path, params=None):
+    try:
+        return _get_live(path, params)
+    except requests.RequestException as e:
+        logger.warning("swapi.dev unavailable (%s); using local stub", e)
+        return swapi_stub.get(path, params)
+
+
+def _get_live(path, params=None):
     response = requests.get(f"{BASE_URL}/{path}", params=params, timeout=TIMEOUT)
     if response.status_code == 404:
         return None
